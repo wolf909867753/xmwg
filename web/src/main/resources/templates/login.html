@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" xmlns:th="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="UTF-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<title>临朐香磨五谷食疗养生-登录</title>
-		<link href="css/common/bootstrap.min.css" rel="stylesheet"/>
-		<link href="css/common/font-awesome.min.css" rel="stylesheet"/>
-		<link rel="stylesheet" type="text/css" href="css/common/zzsc.css"/>
-		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<link th:href="@{css/common/bootstrap.min.css}" rel="stylesheet"/>
+		<link th:href="@{css/common/font-awesome.min.css}" rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" th:href="@{css/common/zzsc.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{css/login.css}"/>
 	</head>
 	<body>
 		<script src="/demos/googlegg.js"></script>
@@ -16,15 +16,17 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-offset-3 col-md-6">
-						<form class="form-horizontal">
+						<form th:action="@{/login}" class="form-horizontal" method="post">
 							<span class="heading">代理商登录</span>
 							<div class="form-group">
-								<input type="number" class="form-control" id="mobile" placeholder="请输入手机号码"/>
+								<input type="text" class="form-control" maxlength="11" name="mobile" id="mobile" placeholder="请输入手机号码"/>
 								<i class="fa fa-user"></i>
+								<p class="error" id="mobile_error" th:text="${mobile}"></p>
 							</div>
-							<div class="form-group help">
-								<input type="password" class="form-control" id="pwd" placeholder="请输入密码"/>
+							<div class="form-group">
+								<input type="password" name="password" maxlength="12" class="form-control" id="pwd" placeholder="请输入6~12位数字和字母组合的密码"/>
 								<i class="fa fa-lock"></i>
+								<p class="error" id="pwd_error" th:text="${password}"></p>
 							</div>
 							<div class="form-group" style="margin-bottom: 10px;">
 								<div class="main-checkbox">
@@ -32,14 +34,14 @@
 									<label for="rememberMe"></label>
 								</div>
 								<span class="text">记住我</span>
-								<button type="submit" class="btn btn-default">立刻登录</button>
+								<button type="submit" class="btn btn-default" id="_btn">立刻登录</button>
 							</div>
-							<span class="heading" style="padding:0;margin-bottom:0px;"></span>
+							<!--<span class="heading" style="padding:0;margin-bottom:0px;"></span>
 							<div class="form-group" style="margin: 0;padding: 0 3.0em 0 0;text-align: right;line-height: 3.0em;">
 								<a href="/index" style="color:#000000;font-size: 14px;">成为代理商</a>
 								|
 								<a href="/index" style="color:#000000;font-size: 14px;">?忘记密码</a>
-							</div>
+							</div>-->
 						</form>
 					</div>
 				</div>
@@ -47,4 +49,7 @@
 			</div>
 		</div>
 	</body>
+	<script type="text/javascript" th:src="@{/js/common/jquery-1.11.2.js}"></script>
+	<script type="text/javascript" th:src="@{/js/common/common.js}"></script>
+	<script type="text/javascript" th:src="@{/js/login.js}"></script>
 </html>

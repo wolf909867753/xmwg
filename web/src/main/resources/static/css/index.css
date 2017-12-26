@@ -7,3 +7,38 @@ body{
     border:1px solid red;
     height: 160px;
 }
+
+.footer{
+    z-index: 10000;
+    float: left;
+    position: fixed;
+    bottom: 0;
+    padding:0;
+    width: 100%;
+    font-size: 1.2em;
+    background-color: #FFFFFF;
+}
+
+.footer a{
+    float: left;
+    width:33%;
+    text-align: center;
+    line-height:3.0em;
+    height: 3.0em;
+    display: inline-block;
+    text-decoration: none;
+    color:#000000;
+}
+
+a:link{
+    text-decoration:none;
+}
+a:visited{
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:none;
+}
+a:active{
+    text-decoration:none;
+}

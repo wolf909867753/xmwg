@@ -12,9 +12,6 @@ spring:
       hibernate:
         hbm2ddl:
           auto: update
-    show-sql: true
-    jackson:
-      default-property-inclusion: non_null
 
 #java文件重新编译
   devtools:
@@ -44,12 +41,3 @@ logging:
   level.org.hibernate.SQL: debug
   path: logs/
   file: core.log
-
- #微信全局配置中心
-wechat:
-  #欢迎语配置
-  xmwg:
-    welcome: 欢迎您关注临朐香磨五谷食疗养生中心！
-  #微信参数配置
-  appid:  #appid
-  appsecret:  #测试appSecret

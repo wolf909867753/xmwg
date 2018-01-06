@@ -7,26 +7,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>香磨五谷</title>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"/>
     <link rel="stylesheet" th:href="@{/css/common/bootstrap.min.css}"/>
     <link rel="stylesheet" th:href="@{/css/common/signin.css}"/>
 
     <link rel="stylesheet" th:href="@{/css/index.css}"/>
+    <link rel="stylesheet" th:href="@{/css/footer.css}"/>
 </head>
 <body>
-    <div class="container" style="height: 1000px;">
-        <a th:href="@{/toLogin}">登录</a>
+    <!--轮播图-->
+    <div id="circleContent" class="container carousel slide" style="padding:0;">
+        <ol class="carousel-indicators lbnum">
+            <li data-target="#circleContent" data-slide-to="0" class="active"></li>
+            <li data-target="#circleContent" data-slide-to="1"></li>
+            <li data-target="#circleContent" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img th:src="@{/images/lbimg/lb01.png}" alt="香磨五谷"/>
+                <div class="carousel-caption lbimgname">养生系列</div>
+            </div>
+            <div class="item">
+                <img th:src="@{/images/lbimg/lb02.png}" alt="香磨五谷"/>
+                <div class="carousel-caption lbimgname">养生系列</div>
+            </div>
+            <div class="item">
+                <img th:src="@{/images/lbimg/lb03.png}" alt="香磨五谷"/>
+                <div class="carousel-caption lbimgname">养生系列</div>
+            </div>
+        </div>
+        <a class="carousel-control left" href="#circleContent" data-slide="prevent">‹</a>
+        <a class="carousel-control right" href="#circleContent" data-slide="next">›</a>
     </div>
-    <div class="container footer">
-        <a th:href="@{/index}">首页</a>
-        <a th:href="@{/index}">购物车</a>
-        <a th:href="@{/index}">我的</a>
+    <div class="container" style="width: 100%;margin-top:2px; ">
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 tblwg">天然食材</div>
+            <div class="col-xs-3 col-sm-3 tblwg">现磨养生粉</div>
+            <div class="col-xs-3 col-sm-3 tblwg">现配固元膏</div>
+            <div class="col-xs-3 col-sm-3 tblwg">华府养生茶</div>
+            <div class="col-xs-3 col-sm-3 tblwg">经典养生粉</div>
+            <div class="col-xs-3 col-sm-3 tblwg">五谷杂粮米昔</div>
+            <div class="col-xs-3 col-sm-3 tblwg">其他</div>
+            <div class="col-xs-3 col-sm-3 tblwg">其他</div>
+        </div>
+   </div>
+    <div class="container" style="width: 100%;margin-top:2px; ">
+        <div class="row product">
+            <img th:src="@{/images/product/p1.jpg}" alt="薏苡仁（薏米）——五谷之王"/>
+            <p>薏苡仁（薏米）——五谷之王</p>
+            <div class="price">￥100 </div>
+            <div class="btn">立即购买</div>
+        </div>
+        <div class="row product">
+            <img th:src="@{/images/product/p1.jpg}" alt="薏苡仁（薏米）——五谷之王"/>
+            <p>薏苡仁（薏米）——五谷之王</p>
+            <div class="price">￥100 </div>
+            <div class="btn">立即购买</div>
+        </div>
+        <div class="row product">
+            <img th:src="@{/images/product/p1.jpg}" alt="薏苡仁（薏米）——五谷之王"/>
+            <p>薏苡仁（薏米）——五谷之王</p>
+            <div class="price">￥100 </div>
+            <div class="btn">立即购买</div>
+        </div>
+        <div class="row product">
+            <img th:src="@{/images/product/p1.jpg}" alt="薏苡仁（薏米）——五谷之王"/>
+            <p>薏苡仁（薏米）——五谷之王</p>
+            <div class="price">￥100 </div>
+            <div class="btn">立即购买</div>
+        </div>
+        <div class="row product">
+            <img th:src="@{/images/product/p1.jpg}" alt="薏苡仁（薏米）——五谷之王"/>
+            <p>薏苡仁（薏米）——五谷之王</p>
+            <div class="price">￥100 </div>
+            <div class="btn">立即购买</div>
+        </div>
+        <a href="#">
+            <div class="row product">
+                <img th:src="@{/images/product/p1.jpg}" alt="薏苡仁（薏米）——五谷之王"/>
+                <p>薏苡仁（薏米）——五谷之王</p>
+                <div class="price">￥100 </div>
+                <div class="btn">立即购买</div>
+            </div>
+        </a>
     </div>
+    <div style="height: 4.5rem"></div>
+    <div class="container footer" th:include="footer :: #footer"></div>
 </body>
 <!--[if lt IE 9]>
 <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 <script type="text/javascript" src="/js/common/jquery-1.11.2.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/common/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/index.js"></script>
 </html>

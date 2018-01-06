@@ -8,6 +8,7 @@
   <modules>
     <module>web</module>
     <module>core</module>
+      <module>core</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -101,41 +102,41 @@
       <artifactId>commons-io</artifactId>
       <version>${commons.io.version}</version>
     </dependency>
-    <dependency>
-      <groupId>com.github.penggle</groupId>
-      <artifactId>kaptcha</artifactId>
-      <version>${kaptcha.version}</version>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>com.github.penggle</groupId>-->
+      <!--<artifactId>kaptcha</artifactId>-->
+      <!--<version>${kaptcha.version}</version>-->
+    <!--</dependency>-->
     <dependency>
       <groupId>org.ehcache</groupId>
       <artifactId>ehcache</artifactId>
       <version>${ehcache.version}</version>
     </dependency>
-    <dependency>
-      <groupId>com.google.zxing</groupId>
-      <artifactId>core</artifactId>
-      <version>${zxing.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.velocity</groupId>
-      <artifactId>velocity</artifactId>
-      <version>${velocity.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.ibeetl</groupId>
-      <artifactId>beetl</artifactId>
-      <version>${beetl.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>io.springfox</groupId>
-      <artifactId>springfox-swagger2</artifactId>
-      <version>${swagger.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>io.springfox</groupId>
-      <artifactId>springfox-swagger-ui</artifactId>
-      <version>${swagger.version}</version>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>com.google.zxing</groupId>-->
+      <!--<artifactId>core</artifactId>-->
+      <!--<version>${zxing.version}</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.apache.velocity</groupId>-->
+      <!--<artifactId>velocity</artifactId>-->
+      <!--<version>${velocity.version}</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>com.ibeetl</groupId>-->
+      <!--<artifactId>beetl</artifactId>-->
+      <!--<version>${beetl.version}</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>io.springfox</groupId>-->
+      <!--<artifactId>springfox-swagger2</artifactId>-->
+      <!--<version>${swagger.version}</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>io.springfox</groupId>-->
+      <!--<artifactId>springfox-swagger-ui</artifactId>-->
+      <!--<version>${swagger.version}</version>-->
+    <!--</dependency>-->
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
@@ -192,4 +193,5 @@
       </resource>
     </resources>
   </build>
+
 </project>

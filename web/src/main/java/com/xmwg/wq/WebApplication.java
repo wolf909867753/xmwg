@@ -8,7 +8,7 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 @SpringBootApplication
 public class WebApplication  extends SpringBootServletInitializer {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {//Environment
         SpringApplication.run(WebApplication.class,args);
     }
 
